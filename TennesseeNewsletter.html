@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State of Tennessee</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Tennessee</h1>
+    </header>
+    <div class="navbar">
+          <nav> <!-- Use the "horizontal-nav" class here -->
+                  <a href="TennesseeMain.html">About</a>
+                  <a href="NashvilleCapital.html">Nashville</a>
+                  <a href="Memphis.html">Memphis</a>
+                  <a href="Knoxville.html">Knoxville</a>
+                  <a class="active" href="TennesseeNewsletter.html">Newsletter</a>
+          </nav>
+    </div>
+    <main>
+          <h1>Submission For Tennessee Newsletter</h1>
+          <!-- Create Newsletter submission form here -->
+          <form action="/submit_form" method="post" onsubmit="return validateForm()">
+              <label for="first-name">First Name:</label>
+              <input type="text" id="first-name" name="first_name" required><br><br>
+
+              <label for="last-name">Last Name:</label>
+              <input type="text" id="last-name" name="last_name" required><br><br>
+
+              <label for="email">User Email:</label>
+              <input type="email" id="email" name="email" required><br><br>
+
+              <label for="confirm-email">Confirm Email:</label>
+              <input type="email" id="confirm-email" name="confirm_email" onkeyup="validateEmailMatch()" required><br><br>
+
+              <input type="submit" value="Submit">
+          </form>
+<!-- Java required for email confirmation validation -->
+          <script>
+              function validateEmailMatch() {
+                  const email = document.getElementById("email").value;
+                  const confirmEmail = document.getElementById("confirm-email").value;
+                  const emailMismatchMessage = "The Email addresses do not match, try again for the Tennessee Newsletter!";
+
+                  if (email !== confirmEmail) {
+                      document.getElementById("confirm-email").setCustomValidity(emailMismatchMessage);
+                  } else {
+                      document.getElementById("confirm-email").setCustomValidity('');
+                  }
+              }
+
+              function validateForm() {
+                  validateEmailMatch();
+                  return true;
+              }
+          </script>
+    </main>
+    <aside>
+      <h3>Quotes from tennesseans</h3>
+      <p><q>Here in Tennessee we don't hide CRAZY we parade it on the front porch and give it a sweet tea!</q></p><br>
+        <p><q>Feeling ‘Tenn-tastic’!</q></p><br>
+            <p><q>Are you from Tennessee? Cause you’re the only ten I see.</q></p><br>
+              <p><q>Tennessee, where the moonshine is strong and the BBQ can’t be beat!</q></p><br>
+                <p><q>No shirt, No teeth, No Problem.</q></p><br>
+                  <p><q>The future is called ‘perhaps,’ which is the only possible thing to call the future.</q></p><br>
+                  <img src="Tennessee Logo.png" alt="Tennessee Logo">
+    </aside>
+    <footer>
+        <p>This is a Derek Dardis (SID: 009456854) Creation</p>
+    </footer>
+</body>
+</html>

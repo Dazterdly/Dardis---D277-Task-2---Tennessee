@@ -1,0 +1,146 @@
+
+header{
+  font-family: "Georgia", sans-serif;
+  font-size: 1rem;
+  color: white;
+  background-color: navy;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, main, footer {
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav li a:hover {
+    color: #007BFF;
+}
+
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+
+.navbar {
+  width: 100%;
+  background-color: navy;
+  overflow: auto;
+}
+
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 18%;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: blue;
+}
+
+.navbar a.active {
+  background-color: red;
+}
+
+.vertical-nav {
+    border: 3px solid green;
+    padding: 20px;
+    display: flex;
+    float: none;
+    position: absolute;
+    flex-direction: column;
+    position: absolute;
+    top: 35%;
+}
+
+.container {
+    display: flex;
+}
+table {
+    width: 40%;
+    margin: auto;
+    float: inline;
+    text-align: center;
+    flex-grow: 1;
+    padding-left: 100px;
+}
+main {
+    width: 69%; /* Nice! */
+    float: left;
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+CityMain {
+    margin: auto;
+    float: inline;
+    text-align: center;
+    flex-grow: 1;
+    max-width: 60%;
+    padding-left: 150px;
+}
+
+CityMain > p {
+    margin: 1rem;
+}
+
+aside {
+    width: 25%;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    float: right;
+    flex-grow: 1;
+    box-shadow: inset 5px 0 5px -5px #04AA6D;
+    font-style: italic;
+    color: Green;
+}
+
+aside > p {
+    margin: 0.5rem;
+}
+
+asideCity {
+    width: 20%;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    float: right;
+    flex-grow: 1;
+    box-shadow: inset 5px 0 5px -5px #04AA6D;
+    font-style: italic;
+    color: Green;
+}
+
+asideCity > p {
+    margin: 0.5rem;
+}
